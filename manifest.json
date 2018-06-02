@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Lee",
+  "description": "A app for lwj",
+  "version": "0.1",
+  "permissions": [
+    "http://api.wunderground.com/api/"
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "content_scripts":
+  [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/app.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+
+// 参考：https://www.cnblogs.com/liuxianan/p/chrome-plugin-develop.html
